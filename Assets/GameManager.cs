@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(scene.buildIndex + 1);
+        AudioManager.Instance.CuentaRegresivaSound();
     }
 
     public void LevelFinisher()
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         Global.nivelMaximo ++;
         scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex + 1);
+        AudioManager.Instance.CuentaRegresivaSound();
         //uwu
     }
 
